@@ -100,7 +100,6 @@ def trouver_la_liste(beat_frames,annot_frames):
   i=0
   liste=[]
   
-  #trouver le premier annot sup ou egal au premier downbeat et apres ok pour faire tous les cas!
   
   for k in range (len(annot_frames)): 
     
@@ -203,7 +202,6 @@ import mir_eval
 
 y=mir_eval.io.load_intervals('test1.csv',',')
 
-y
 
 val=1648
 ref_intervals = mir_eval.io.load_intervals('/content/drive/My Drive/Colab Notebooks/Results for beatsync/times_th/'+str(val)+'.csv',',')
@@ -247,8 +245,6 @@ dico_moyenneresults=[moy_F/len(idSALAMITest),moy_P/len(idSALAMITest),moy_R/len(i
 
 dico_moyenneresults
 
-"""https://craffel.github.io/mir_eval/#module-mir_eval.segment"""
-
 !pip install --upgrade -q gspread 
 !pip install gspread-dataframe
 
@@ -282,9 +278,6 @@ ws=sheet1.worksheet('resultsSSMwithdownbeatsync')
 
 file=get_as_dataframe(ws)
 
-file
-
-len(file)
 
 segment=[]
 
