@@ -84,10 +84,6 @@ test_generator = test_datagen.flow_from_directory(
 
 predictions=pickle.load(open('/content/drive/My Drive/Colab Notebooks/Results for downbeatsync/predictionsSSMwithdownbeatsync', 'rb'))
 
-len(predictions)
-
-predictions
-
 filenames=test_generator.filenames
 results=pd.DataFrame({"Filename":filenames,
                       "Predictions":predictions})
